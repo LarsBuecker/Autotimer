@@ -9,12 +9,12 @@ while True:
     if active_window_name != new_window_name:
         active_window_name = new_window_name
         appName = active_window_name.split()
-        print(appName[-1]) #4 for Mail bei Browser
-        #print(active_window_name)
-        if appName[-1] == 'Firefox':
-            tab = appName[-4]
-            if tab == 'Gmail':
-                print("You are in Gmail")
-
-    
+        if len(appName) != 0:
+            print(appName[-1])
+            if appName[-1] == 'Firefox':
+                tab = appName[-4]
+                if tab == 'Gmail':
+                    print("You are in Gmail")
+        else:
+            print("PC is in Idle")
     time.sleep(2)
